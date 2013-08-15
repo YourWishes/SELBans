@@ -22,6 +22,18 @@ public class CommandKick extends BansBase implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         if(cmd.getName().equalsIgnoreCase("kick")) {
+            /*
+             * Added re-permissions checking (Double checks plugin.yml permissions)
+             * Built from:
+             *      https://github.com/macintosh264/SELBans/commit/5d30201948dc9603f446762c431768d869c1fb56
+             * Notes:
+             *      Changed to getting the Command's variables (For dynamic changing)
+             */
+            if(!sender.hasPermission(cmd.getPermission())) {
+                sender.sendMessage(cmd.getPermissionMessage());
+                return true;
+            }
+            
             if(args.length < 1) {
                 sender.sendMessage(ChatError + "Enter a player name!");
                 return false;
@@ -52,6 +64,11 @@ public class CommandKick extends BansBase implements CommandExecutor {
         }
         
         if(cmd.getName().equalsIgnoreCase("warn")) {
+            if(!sender.hasPermission(cmd.getPermission())) {
+                sender.sendMessage(cmd.getPermissionMessage());
+                return true;
+            }
+            
             if(args.length < 1) {
                 sender.sendMessage(ChatError + "Enter a player name!");
                 return false;
