@@ -23,9 +23,9 @@
 	
 	
 	$pageTitle = 'SELBans';
-	$bootstrap = 'http://twitter.github.io/bootstrap/assets/js/bootstrap.js';
-	$bootstrapCSS = 'http://twitter.github.io/bootstrap/assets/css/bootstrap.css';
-	$jQuery = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+	$bootstrap = 'http://domsplace.com/Bootstrap/Bootstrap_2_3_2/js/bootstrap.js';
+	$bootstrapCSS = 'http://domsplace.com/Bootstrap/Bootstrap_2_3_2/css/bootstrap.css';
+	$jQuery = 'http://domsplace.com/jQuery/jquery-1.9.1.min.js';
 	$minecraftUsernameRegexPHP = '/[^a-z0-9_]/i';
 	$minecraftUsernameRegexJS = '/[^a-z0-9_]/gi';
 	
