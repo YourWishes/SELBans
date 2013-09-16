@@ -390,7 +390,7 @@ public class BansUtils extends BansBase {
     public static void checkBans() {
         String statement = ""
                 + "SELECT * FROM " + sqlDB + "."+ sqlTable + "Bans "
-                + "WHERE active='true' AND date != unbandate ORDER BY date ASC";
+                + "WHERE active='true' AND date <> unbandate ORDER BY date ASC";
         List<Map<String, String>> results = sqlFetch(statement);
         if(results == null) {
             return;
